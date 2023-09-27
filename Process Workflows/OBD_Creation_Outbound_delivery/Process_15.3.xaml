@@ -1,0 +1,200 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Process_15_3" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1514,1373" sap2010:WorkflowViewState.IdRef="Process_15_3_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Process_15_3" sap:VirtualizedContainerService.HintSize="546,1308" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;OBD Creation: Step 3 process started&quot;]" />
+    <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Toolbar  tbar[1]'" sap:VirtualizedContainerService.HintSize="484,160" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_2" Item="Select All   (F5)">
+      <ucas:ClickToolbarButton.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="32">
+          <x:String xml:space="preserve">Refresh   (F8)</x:String>
+          <x:String xml:space="preserve">Create single delivery in dialog   (Shift+F6)</x:String>
+          <x:String xml:space="preserve">Create Delivery in Background   (Shift+F7)</x:String>
+          <x:String xml:space="preserve">Check Unchecked Deliveries   (Ctrl+Shift+F7)</x:String>
+          <x:String xml:space="preserve">Show\/Hide Delivery   (Shift+F8)</x:String>
+          <x:String xml:space="preserve">Sequential Display   (Ctrl+Shift+F10)</x:String>
+          <x:String xml:space="preserve">Choose Detail   (Ctrl+Shift+F3)</x:String>
+          <x:String xml:space="preserve">Select All   (F5)</x:String>
+          <x:String xml:space="preserve">Deselect All   (F6)</x:String>
+          <x:String xml:space="preserve">Sort in Ascending Order   (Ctrl+F4)</x:String>
+          <x:String xml:space="preserve">Sort in Descending Order   (Ctrl+Shift+F4)</x:String>
+          <x:String xml:space="preserve">Set Filter   (Ctrl+F5)</x:String>
+          <x:String xml:space="preserve">Display Sum   (Ctrl+F6)</x:String>
+          <x:String xml:space="preserve">Subtotal...   (Ctrl+Shift+F6)</x:String>
+          <x:String xml:space="preserve">Expand   (Ctrl+F11)</x:String>
+          <x:String xml:space="preserve">Collapse   (Ctrl+F12)</x:String>
+          <x:String xml:space="preserve">Local File...   (Ctrl+Shift+F9)</x:String>
+          <x:String xml:space="preserve">Send...   (Ctrl+F7)</x:String>
+          <x:String xml:space="preserve">Change Layout...   (Ctrl+F8)</x:String>
+          <x:String xml:space="preserve">Select Layout...   (Ctrl+F9)</x:String>
+          <x:String xml:space="preserve">Save Layout...   (Ctrl+F10)</x:String>
+          <x:String xml:space="preserve">List Status...   (Ctrl+Shift+F5)</x:String>
+          <x:String xml:space="preserve">Column Left   (Ctrl+F2)</x:String>
+          <x:String xml:space="preserve">Column Right   (Ctrl+F3)</x:String>
+          <x:String xml:space="preserve">Last Column   (Ctrl+Shift+F12)</x:String>
+          <x:String xml:space="preserve">Delete Deliveries   (Shift+F2)</x:String>
+        </scg:List>
+      </ucas:ClickToolbarButton.Items>
+      <ucas:ClickToolbarButton.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="451eb228-8a4c-43f0-807d-2a25fa7d73a2" InformativeScreenshot="1e83b86d3e1299a9c0b30f092a03bf67" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='tbar[1]' type='GuiToolbar' /&gt;" WaitForReady="COMPLETE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ucas:ClickToolbarButton.Target>
+    </ucas:ClickToolbarButton>
+    <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Toolbar  tbar[1]'" sap:VirtualizedContainerService.HintSize="484,160" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_3" Item="Create Delivery in Background   (Shift+F7)">
+      <ucas:ClickToolbarButton.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="32">
+          <x:String xml:space="preserve">Refresh   (F8)</x:String>
+          <x:String xml:space="preserve">Create single delivery in dialog   (Shift+F6)</x:String>
+          <x:String xml:space="preserve">Create Delivery in Background   (Shift+F7)</x:String>
+          <x:String xml:space="preserve">Check Unchecked Deliveries   (Ctrl+Shift+F7)</x:String>
+          <x:String xml:space="preserve">Show\/Hide Delivery   (Shift+F8)</x:String>
+          <x:String xml:space="preserve">Sequential Display   (Ctrl+Shift+F10)</x:String>
+          <x:String xml:space="preserve">Choose Detail   (Ctrl+Shift+F3)</x:String>
+          <x:String xml:space="preserve">Select All   (F5)</x:String>
+          <x:String xml:space="preserve">Deselect All   (F6)</x:String>
+          <x:String xml:space="preserve">Sort in Ascending Order   (Ctrl+F4)</x:String>
+          <x:String xml:space="preserve">Sort in Descending Order   (Ctrl+Shift+F4)</x:String>
+          <x:String xml:space="preserve">Set Filter   (Ctrl+F5)</x:String>
+          <x:String xml:space="preserve">Display Sum   (Ctrl+F6)</x:String>
+          <x:String xml:space="preserve">Subtotal...   (Ctrl+Shift+F6)</x:String>
+          <x:String xml:space="preserve">Expand   (Ctrl+F11)</x:String>
+          <x:String xml:space="preserve">Collapse   (Ctrl+F12)</x:String>
+          <x:String xml:space="preserve">Local File...   (Ctrl+Shift+F9)</x:String>
+          <x:String xml:space="preserve">Send...   (Ctrl+F7)</x:String>
+          <x:String xml:space="preserve">Change Layout...   (Ctrl+F8)</x:String>
+          <x:String xml:space="preserve">Select Layout...   (Ctrl+F9)</x:String>
+          <x:String xml:space="preserve">Save Layout...   (Ctrl+F10)</x:String>
+          <x:String xml:space="preserve">List Status...   (Ctrl+Shift+F5)</x:String>
+          <x:String xml:space="preserve">Column Left   (Ctrl+F2)</x:String>
+          <x:String xml:space="preserve">Column Right   (Ctrl+F3)</x:String>
+          <x:String xml:space="preserve">Last Column   (Ctrl+Shift+F12)</x:String>
+          <x:String xml:space="preserve">Delete Deliveries   (Shift+F2)</x:String>
+        </scg:List>
+      </ucas:ClickToolbarButton.Items>
+      <ucas:ClickToolbarButton.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="451eb228-8a4c-43f0-807d-2a25fa7d73a2" InformativeScreenshot="1e83b86d3e1299a9c0b30f092a03bf67" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='tbar[1]' type='GuiToolbar' /&gt;" WaitForReady="COMPLETE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ucas:ClickToolbarButton.Target>
+    </ucas:ClickToolbarButton>
+    <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="484,435" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="2" StartAt="1">
+      <ui:RepeatNumberOfTimesX.Body>
+        <ActivityAction x:TypeArguments="x:Int32">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,271" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Toolbar  tbar[0]'" sap:VirtualizedContainerService.HintSize="388,160" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Back   (F3)">
+              <ucas:ClickToolbarButton.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Enter</x:String>
+                  <x:String xml:space="preserve">Save as Variant...   (Ctrl+S)</x:String>
+                  <x:String xml:space="preserve">Back   (F3)</x:String>
+                  <x:String xml:space="preserve">Exit   (Shift+F3)</x:String>
+                  <x:String xml:space="preserve">Cancel   (F12)</x:String>
+                  <x:String xml:space="preserve">Execute and Print   (Ctrl+P)</x:String>
+                  <x:String>New GUI Window</x:String>
+                  <x:String>Generates shortcut</x:String>
+                  <x:String xml:space="preserve">Help   (F1)</x:String>
+                </scg:List>
+              </ucas:ClickToolbarButton.Items>
+              <ucas:ClickToolbarButton.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f05dd1e-c5d1-4741-b095-accf1e239c06" InformativeScreenshot="51f4edb6d47071f02f8ab5e401340462" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*' /&gt;&lt;sap id='tbar[0]' type='GuiToolbar' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ucas:ClickToolbarButton.Target>
+            </ucas:ClickToolbarButton>
+          </Sequence>
+        </ActivityAction>
+      </ui:RepeatNumberOfTimesX.Body>
+    </ui:RepeatNumberOfTimesX>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;OBD Creation: Step 3 process ended&quot;]" />
+  </Sequence>
+</Activity>
