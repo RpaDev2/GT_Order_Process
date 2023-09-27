@@ -5,6 +5,7 @@
     <x:Property Name="in_CustomerMasterFile" Type="InArgument(x:String)" />
     <x:Property Name="in_CopyCreditFile" Type="InArgument(x:String)" />
     <x:Property Name="in_CustomerSheetName" Type="InArgument(x:String)" />
+    <x:Property Name="in_CreditSheetName" Type="InArgument(x:String)" />
   </x:Members>
   <this:Process_6_7.in_CreditFileName>
     <InArgument x:TypeArguments="x:String" />
@@ -12,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>846,3175</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1514,3175</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_6_7_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -236,7 +237,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:FilterX ClearFilter="False" ColumnName="CusMode" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,169" sap2010:WorkflowViewState.IdRef="FilterX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]">
+                                    <ueab:FilterX ClearFilter="False" ColumnName="CusMode" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,169" sap2010:WorkflowViewState.IdRef="FilterX_1" Range="[Excel.Sheet(in_CreditSheetName)]">
                                       <ueab:FilterX.FilterArgument>
                                         <ueabf:FilterArgument Mode="Basic">
                                           <ueabf:FilterArgument.AdvancedFiltersArgument>
@@ -261,7 +262,7 @@
                                         </ueabf:FilterArgument>
                                       </ueab:FilterX.FilterArgument>
                                     </ueab:FilterX>
-                                    <ueab:FindFirstLastDataRowX BlankRowsToSkip="1" ColumnName="True/False" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowIndex="[FirstRow_NACH]" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_1" LastRowIndex="[LastRow_NACH]" LastRowOffset="0" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" VisibleRowsOnly="True">
+                                    <ueab:FindFirstLastDataRowX BlankRowsToSkip="1" ColumnName="True/False" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowIndex="[FirstRow_NACH]" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_1" LastRowIndex="[LastRow_NACH]" LastRowOffset="0" Range="[Excel.Sheet(in_CreditSheetName)]" VisibleRowsOnly="True">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -269,7 +270,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ueab:FindFirstLastDataRowX>
-                                    <ueab:FillRangeX DestinationRange="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;S&quot;+FirstRow_NACH.ToString+&quot;:S&quot;+LastRow_NACH.ToString)]" DisplayName="Fill Range" sap:VirtualizedContainerService.HintSize="434,138" sap2010:WorkflowViewState.IdRef="FillRangeX_1" Value="[&quot;=U&quot;+FirstRow_NACH.ToString]" />
+                                    <ueab:FillRangeX DestinationRange="[Excel.Sheet(in_CreditSheetName).Range(&quot;S&quot;+FirstRow_NACH.ToString+&quot;:S&quot;+LastRow_NACH.ToString)]" DisplayName="Fill Range" sap:VirtualizedContainerService.HintSize="434,138" sap2010:WorkflowViewState.IdRef="FillRangeX_1" Value="[&quot;=U&quot;+FirstRow_NACH.ToString]" />
                                     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,398" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -289,7 +290,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <ueab:FilterX ColumnName="{x:Null}" FilterArgument="{x:Null}" ClearFilter="True" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,169" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" />
+                                    <ueab:FilterX ColumnName="{x:Null}" FilterArgument="{x:Null}" ClearFilter="True" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,169" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[Excel.Sheet(in_CreditSheetName)]" />
                                   </Sequence>
                                   <Sequence DisplayName="Update Auto Save Customer column" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <Sequence.Variables>
@@ -311,13 +312,13 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ueab:FindFirstLastDataRowX>
-                                    <ueab:WriteCellX Cell="[Excel.Sheet(in_CustomerSheetName).Cell(&quot;T&quot;+FirstRow_ASC.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;=VLOOKUP(D2,[&quot;+CustomerMasterFileName+&quot;]&quot;+in_CustomerSheetName+&quot;!$B:$E,4,0)&quot;]" />
+                                    <ueab:WriteCellX Cell="[Excel.Sheet(in_CreditSheetName).Cell(&quot;T&quot;+FirstRow_ASC.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;=VLOOKUP(D2,'[&quot;+CustomerMasterFileName+&quot;]&quot;+in_CustomerSheetName+&quot;'!$B:$E,4,0)&quot;]" />
                                     <ui:ExcelAutoFillRange DisplayName="Auto Fill Range" FillRange="[&quot;T&quot;+FirstRow_ASC.ToString+&quot;:T&quot;+LastRow_ASC.ToString]" sap:VirtualizedContainerService.HintSize="444,88" sap2010:WorkflowViewState.IdRef="ExcelAutoFillRange_2" SheetName="Sheet1" SourceRange="[&quot;T&quot;+FirstRow_ASC.ToString]" />
-                                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,169" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(in_CustomerSheetName).Range(&quot;S&quot;+FirstRow_ASC.ToString+&quot;:S&quot;+LastRow_ASC.ToString)]" SaveTo="[dt_ColumnS]" />
-                                    <ueab:WriteRangeX Destination="[Excel.Sheet(in_CustomerSheetName).Range(&quot;S2&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dt_ColumnS]" />
+                                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,169" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(in_CreditSheetName).Range(&quot;S&quot;+FirstRow_ASC.ToString+&quot;:S&quot;+LastRow_ASC.ToString)]" SaveTo="[dt_ColumnS]" />
+                                    <ueab:WriteRangeX Destination="[Excel.Sheet(in_CreditSheetName).Range(&quot;S2&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dt_ColumnS]" />
                                   </Sequence>
-                                  <ueab:DeleteColumnX ColumnName="CusMode" DisplayName="Delete Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="450,160" sap2010:WorkflowViewState.IdRef="DeleteColumnX_1" Range="[Excel.Sheet(in_CustomerSheetName)]" />
-                                  <ueab:DeleteColumnX ColumnName="True/False" DisplayName="Delete Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="450,160" sap2010:WorkflowViewState.IdRef="DeleteColumnX_2" Range="[Excel.Sheet(in_CustomerSheetName)]" />
+                                  <ueab:DeleteColumnX ColumnName="CusMode" DisplayName="Delete Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="450,160" sap2010:WorkflowViewState.IdRef="DeleteColumnX_1" Range="[Excel.Sheet(in_CreditSheetName)]" />
+                                  <ueab:DeleteColumnX ColumnName="True/False" DisplayName="Delete Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="450,160" sap2010:WorkflowViewState.IdRef="DeleteColumnX_2" Range="[Excel.Sheet(in_CreditSheetName)]" />
                                 </Sequence>
                               </ActivityAction>
                             </ueab:ExcelApplicationCard.Body>

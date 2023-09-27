@@ -142,6 +142,7 @@
             <Variable x:TypeArguments="x:String" Name="str_CustomerSheetName" />
             <Variable x:TypeArguments="sd:DataTable" Name="dt_CustomerFile" />
             <Variable x:TypeArguments="x:String" Name="str_OrderSheetName" />
+            <Variable x:TypeArguments="x:String" Name="str_CreditSheetName" />
           </Flowchart.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -155,7 +156,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
-            <x:Reference>__ReferenceID12</x:Reference>
+            <x:Reference>__ReferenceID13</x:Reference>
           </Flowchart.StartNode>
           <FlowStep x:Name="__ReferenceID7">
             <sap:WorkflowViewStateService.ViewState>
@@ -165,7 +166,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">820,70 870,70</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Enter the T code &#xA;&quot;ZCREDIT_CHECK&quot;" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.1.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_53" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.1.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Enter the T code &#xA;&quot;ZCREDIT_CHECK&quot;" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.1.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_60" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.1.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_strTcode">[str_Tcode]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_SAPAppName">[str_SAP_AppName]</InArgument>
@@ -197,7 +198,7 @@
                     <av:PointCollection x:Key="ConnectorLocation">1070,70 1120,70</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Enter the customer &#xA;codes and refresh the &#xA;page by pressing the F5 &#xA;key" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.2.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.2.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Enter the customer &#xA;codes and refresh the &#xA;page by pressing the F5 &#xA;key" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.2.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_61" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.2.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_CustomerCodes">[dt_CustomerCodes]</OutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_PDP_ReportFile">[in_InputTempFolder+str_PDP_File]</InArgument>
@@ -219,7 +220,7 @@
                         <av:PointCollection x:Key="ConnectorLocation">1220,132 1220,207.99999999999997</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Enter the T code &#xA;&quot;ZOM_MGMT&quot; and &#xA;click on &quot;Cheque / &#xA;Credit Details" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.3.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_55" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.3.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Enter the T code &#xA;&quot;ZOM_MGMT&quot; and &#xA;click on &quot;Cheque / &#xA;Credit Details" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.3.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_62" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.3.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="in_str_TCodeforCreditDownload">[str_TCodeforCreditDownload]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
@@ -239,7 +240,7 @@
                             <av:PointCollection x:Key="ConnectorLocation">1120,270 1070,270</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Select the TOOL &#xA;CREDIT layout and &#xA;download the &#xA;report in Excel" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.4.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.4.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Select the TOOL &#xA;CREDIT layout and &#xA;download the &#xA;report in Excel" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.4.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_63" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.4.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="Out_OutputPath" />
                             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_CustomerCodes">[dt_CustomerCodes]</InArgument>
@@ -348,12 +349,27 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Update P3 customer column &amp; Custome Mode column from Customer Master file" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.9.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,109" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.9.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_CreditFileName">[str_CreditBalanceFile]</InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_ExportFile">[OutputPath]</InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_CustomerMasterFile">[str_CustomerMasterFile]</InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_CustomerSheetName">[str_CustomerSheetName]</InArgument>
-                                                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_CustomerFile">[dt_CustomerFile]</OutArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_InputTempFolder">[in_InputTempFolder]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_CreditFileName">
+                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CreditBalanceFile" />
+                                                </InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_ExportFile">
+                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="OutputPath" />
+                                                </InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_CustomerMasterFile">
+                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CustomerMasterFile" />
+                                                </InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_CustomerSheetName">
+                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CustomerSheetName" />
+                                                </InArgument>
+                                                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_CustomerFile">
+                                                  <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_CustomerFile" />
+                                                </OutArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_InputTempFolder">
+                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_InputTempFolder" />
+                                                </InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_CreditSheetName">
+                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CreditSheetName" />
+                                                </InArgument>
                                               </ui:InvokeWorkflowFile.Arguments>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -372,11 +388,24 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Update NACH and Auto Save Customer column" DisplayName="Process Workflows\Credit_Report_Processing\Process_6.10.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Process Workflows\Credit_Report_Processing\Process_6.10.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CreditFileName">[str_CreditBalanceFile]</InArgument>
-                                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_CustomerFile">[dt_CustomerFile]</InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CustomerMasterFile">[str_CustomerMasterFile]</InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CopyCreditFile">[in_Config("ProcessFilesPath").ToString+"\"]</InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CustomerSheetName">[str_CustomerSheetName]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CreditFileName">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CreditBalanceFile" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_CustomerFile">
+                                                      <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_CustomerFile" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CustomerMasterFile">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CustomerMasterFile" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CopyCreditFile">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ProcessFilesPath&quot;).ToString+&quot;\&quot;" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CustomerSheetName">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CustomerSheetName" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_CreditSheetName">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CreditSheetName" />
+                                                    </InArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -646,6 +675,14 @@
                       <InArgument x:TypeArguments="x:String">[Process_Config("OrderSheetName").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_CreditSheetName]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[Process_Config("CreditSheetName").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
               <sap:WorkflowViewStateService.ViewState>
@@ -659,7 +696,7 @@
               <x:Reference>__ReferenceID7</x:Reference>
             </FlowStep.Next>
           </FlowStep>
-          <FlowStep x:Name="__ReferenceID12">
+          <FlowStep x:Name="__ReferenceID13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">110,44</av:Point>
@@ -686,6 +723,79 @@
           <x:Reference>__ReferenceID10</x:Reference>
           <x:Reference>__ReferenceID0</x:Reference>
           <x:Reference>__ReferenceID11</x:Reference>
+          <FlowStep>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">823,409</av:Point>
+                <av:Size x:Key="ShapeSize">200,52</av:Size>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[OutputPath]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.IO.Path.GetFullPath("Process Workflows\Credit_Report_Processing\export.xlsx")]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+          </FlowStep>
+          <FlowStep>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">340,184</av:Point>
+                <av:Size x:Key="ShapeSize">200,52</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">540,210 570,210 570,140 620,140</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_InputTempFolder]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="Data\Input\Order page.xlsx">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CopyFile>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID12">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">620,114</av:Point>
+                    <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_InputTempFolder]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CopyFile_2" Path="Data\Input\PDP.xlsx">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CopyFile>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                </ui:CommentOut>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+          <x:Reference>__ReferenceID12</x:Reference>
         </Flowchart>
       </TryCatch.Try>
       <TryCatch.Catches>
